@@ -1,0 +1,13 @@
+<h1>タスクリストにログイン</h1>
+
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+  <%= f.label :email, 'メールアドレス'%>
+  <%= f.email_field :email %>
+<br>
+  <%= f.label :password, 'パスワード' %>
+  <%= f.password_field :password %>
+<br>
+  <%= f.submit 'ログイン' %>
+<% end %>
+
+<p>新規ユーザの場合は<%= link_to 'サインアップ', signup_path %>してください</p>
